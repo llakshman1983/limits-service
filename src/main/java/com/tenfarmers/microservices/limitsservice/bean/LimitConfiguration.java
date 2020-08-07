@@ -1,5 +1,7 @@
 package com.tenfarmers.microservices.limitsservice.bean;
 
+import org.springframework.boot.context.properties.ConfigurationProperties;
+
 
 public class LimitConfiguration {
 	private int maximum;

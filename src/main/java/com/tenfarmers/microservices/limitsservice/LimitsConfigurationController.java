@@ -11,11 +11,10 @@ import com.tenfarmers.microservices.limitsservice.bean.LimitConfiguration;
 public class LimitsConfigurationController {
 	
 	@Autowired
-	private Configuration configuration;
+	private Configuration config;
 	
 	@GetMapping("/limits")	
-	public Configuration retrieveLimitsFromConfiguration() {
-		return configuration;
-		//return new LimitConfiguration(300, 30);
+	public LimitConfiguration retrieveLimitsFromConfiguration() {		
+		return new LimitConfiguration(config.getMaximum(), config.getMinimum());
 	}
 }
